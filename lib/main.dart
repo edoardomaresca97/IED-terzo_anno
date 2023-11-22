@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:personal_app23/src/presentazione/auth/core/Presentation/splash_view.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
-void main() {
+void main() async {
+  await Supabase.initialize(
+    url: 'https://resqqyqergmlybfddgsl.supabase.co',
+    anonKey:
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJlc3FxeXFlcmdtbHliZmRkZ3NsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA2NjU5MTIsImV4cCI6MjAxNjI0MTkxMn0.HP8MZkCUv3W6HUMyVk7mHq4CQkQVGZ3iS9jjPbSt26g',
+  );
   runApp(const MyApp());
 }
 
@@ -24,7 +31,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const SplashConnector(),
     );
   }
 }
