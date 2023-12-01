@@ -13,7 +13,9 @@ class SplashConnector extends StatefulWidget {
 class _SplashConnectorState extends State<SplashConnector> {
   @override
   void initState() {
-    checkUser();
+    if (user != null) {
+      goTo(context, const HomeConnector());
+    }
     super.initState();
   }
 

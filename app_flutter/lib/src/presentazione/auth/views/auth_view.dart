@@ -13,6 +13,7 @@ class AuthConnector extends StatefulWidget {
 class _AuthConnectorState extends State<AuthConnector> {
   @override
   void initState() {
+    ifUserExist(context);
     super.initState();
     print(supabase.auth.currentUser);
   }
